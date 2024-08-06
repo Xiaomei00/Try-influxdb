@@ -221,7 +221,7 @@ def get_all_data_block(w3,client,url, token, org,bucket):
     latest_block_number = w3.eth.get_block_number()
     last_block_number = get_last_block_influxdb(client,url, token, org, bucket)
 
-    for block_number in range(last_block_number + 1, 9000+1):
+    for block_number in range(last_block_number + 1, latest_block_number + 1):
         try:
             block_desc = w3.eth.get_block(block_number)
             block_transaction = w3.eth.get_block_transaction_count(block_number)
