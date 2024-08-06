@@ -287,16 +287,16 @@ def get_all_data_block(w3,client,url, token, org,bucket):
 
             point = Point("block_info") \
                 .field("block_number", block_number) \
-                .field("block_hash", "0x" + block_hash) \
-                .field("parent_hash", "0x" + parent_hash) \
+                .field("block_hash", + block_hash) \
+                .field("parent_hash", + parent_hash) \
                 .field("nounce", nonce) \
-                .field("sha3_uncles", "0x" + sha3Uncles) \
+                .field("sha3_uncles", + sha3Uncles) \
                 .field("transaction", str(transaction)) \
                 .field("miner", miner) \
                 .field("difficulty", difficulty) \
                 .field("total_difficulty", total_difficulty) \
                 .field("size", size) \
-                .field("extra_data", "0x" + extra_data) \
+                .field("extra_data", + extra_data) \
                 .field("gas_limit", gas_limit) \
                 .field("gas_used", gas_used) \
                 .field("timestamp", timestamp_block) \
